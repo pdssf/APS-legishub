@@ -14,6 +14,7 @@ distribuídos, etc.
 
 > Casos de uso: https://docs.google.com/document/d/1EvbiU_SHeXC9GfdyGzs15OMjRmSw8Ueq1qSPCbxJ9bY/edit?usp=sharing
 
+Os diagramas de caso de uso, diagramas de classe e diagramas de sequência estão inseridos no arquivo .astah
 
 > Mapeamento de classes de análise: https://docs.google.com/spreadsheets/d/1yaiw9nUp4c3SicvCC0KckQXhbMY18DJ2QZNFQSO4f8Y/edit?usp=sharing
 

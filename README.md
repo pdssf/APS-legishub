@@ -18,3 +18,4 @@ Os diagramas de caso de uso, diagramas de classe e diagramas de sequência estã
 
 > Mapeamento de classes de análise: https://docs.google.com/spreadsheets/d/1yaiw9nUp4c3SicvCC0KckQXhbMY18DJ2QZNFQSO4f8Y/edit?usp=sharing
 
+> Apresentação legishub: https://docs.google.com/presentation/d/1w8IGYHbsA1shdvKrShpn9b0BV4ccFIBNu-TIPMGlsoU/edit?usp=sharing

@@ -1,15 +1,14 @@
 package br.com.cin.aps.apjservice.entity
 
 import com.fasterxml.jackson.annotation.JsonIgnore
-import com.fasterxml.jackson.annotation.JsonProperty
 import javax.persistence.*
 
 @Entity
-data class Login (
+data class Conta (
     @Column(name = "login_username")
     val login: String,
     @Column(name = "login_password")
-    val password: String
+    val senha: String
     ){
     @JsonIgnore
     @Id

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+  <h2 style="position: absolute;top: 40%;left: 47%;font-family: Verdana,serif">Login</h2>
+<form action="fazLogin" method="post">
+  <div style="position: absolute;top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);">
+    <label>Login</label>
+    <input name="login">
+    <br>
+    <label>Senha</label>
+    <input name="senha" type="password">
+    <input type="submit" value="Entrar" style="position: relative;left: 15%;width:65%;height: 100%">
+
+  </div>
+
+</form>
+<div th:if="${erroLogin}" style="line-break: strict; position: absolute;top: 55%;left: 42%;color: red;background-color: aliceblue">
+  <div th:text="${erroLogin}"></div>
+</div>
+</body>
+</html>

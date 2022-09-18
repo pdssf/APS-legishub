@@ -6,9 +6,11 @@ import org.springframework.stereotype.Component
 class Contas(val contas : MutableList<Conta> = mutableListOf()) {
 
 
-    fun buscaConta(login : String) = contas.firstOrNull { c -> c.login == login }
+    fun buscarConta(login : String) = contas.firstOrNull { c -> c.login == login }
 
     fun checaContaExistente(login : String) = contas.any { c -> c.login == login }
 
     fun inserirConta(conta : Conta) = contas.add(conta)
+
+
 }

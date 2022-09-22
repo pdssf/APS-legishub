@@ -73,7 +73,7 @@ const users = {
           const token = await res.user.getIdToken();
           console.log(token);
           axios
-            .post("http://localhost:8080/sessions", token)
+            .post("http://localhost:8081/api/loginSessions", token)
             .catch((e) => console.log("api down", e));
           axios
             .post("http://localhost:8082/api/wallet/cards", {
@@ -102,7 +102,7 @@ const users = {
           const token = await res.user.getIdToken();
           console.log(token);
           axios
-            .post("http://localhost:8081/api/sessions", token)
+            .post("http://localhost:8081/api/loginSessions", token)
             .catch((e) => console.log("api down", e));
           commit("setUser", res.user);
           router.push("/home");

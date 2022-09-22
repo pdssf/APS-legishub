@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wallet-server
+spec:
+  selector:
+    matchLabels:
+      app: wallet-server
+  template:
+    metadata:
+      labels:
+        app: wallet-server
+    spec:
+      containers:
+        - name: wallet-server
+          image: felipes102/legishub-wallet
+          ports:
+            - containerPort: 8082

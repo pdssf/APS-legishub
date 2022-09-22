@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    show-sql: true
+  h2.console.path: /h2-console
+  datasource:
+    password: admin
+    username: admin
+    url: jdbc:h2:mem:protocoldb
+
+server:
+  port: 8081
+
+protocols:
+  price: 50.0

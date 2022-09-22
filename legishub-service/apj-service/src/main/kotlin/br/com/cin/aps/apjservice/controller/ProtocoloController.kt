@@ -3,13 +3,11 @@ package br.com.cin.aps.apjservice.controller
 import br.com.cin.aps.apjservice.entity.Protocolo
 import br.com.cin.aps.apjservice.service.ControladorProtocolo
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/protocols")
+@CrossOrigin(origins = ["*"], allowedHeaders = ["*"])
 class ProtocoloController(val service: ControladorProtocolo) {
 
     @PostMapping

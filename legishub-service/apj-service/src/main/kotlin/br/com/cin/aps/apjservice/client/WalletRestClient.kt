@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody
 interface WalletRestClient {
 
   @PostMapping("/charges")
-  fun chargeLogin(@RequestBody walletRestServiceRequest: WalletRestServiceChargeRequest): Boolean
+  fun chargeLogin(@RequestBody walletRestServiceRequest: WalletRestServiceChargeRequest): String
 
 }

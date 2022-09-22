@@ -7,7 +7,7 @@ import VueRouter from "vue-router";
 import Chats from "./pages/Chats.vue";
 import Messages from "./pages/Messages.vue";
 import Login from "./pages/Login.vue";
-import { auth, firestore, timestamp } from "./config/firebase.js";
+import { auth, timestamp } from "./config/firebase.js";
 import axios from "axios";
 
 Vue.use(Vuex);
@@ -23,9 +23,11 @@ const chat = {
     async sendMessage({ commit }, payload) {
       try {
         payload.createdAt = timestamp;
-        await firestore.collection("messages").add(payload);
-        axios
-          .post("http://localhost:8080/api/protocols", payload)
+        const url = 'http://localhost:8081/api/protocols'
+        console.log("enviando para ", url)
+        // await firestore.collection("messages").add(payload);
+        await axios
+          .post(url, payload)
           .catch((e) => console.log("api down", e));
         console.log("mensagem enviada");
       } catch (error) {
@@ -78,11 +80,12 @@ const users = {
           axios
             .post("http://localhost:8082/api/wallet/cards", {
               login: res.user.email,
+              card: {
               bandeira: "VISA",
-              numero: "54654564",
+              numero: "54654564" + res.user.email,
               codigo: 232,
               validade: 2027,
-            })
+            }})
             .catch((e) => console.log("api down", e));
           commit("setUser", res.user);
           router.push("/home");

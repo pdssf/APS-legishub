@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/wallet")
+@CrossOrigin(origins = {"*"}, allowedHeaders = {"*"})
 public class WalletController {
 
     @Autowired
